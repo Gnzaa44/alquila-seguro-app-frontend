@@ -1,0 +1,135 @@
+body {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  background: #f7f8fa;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar, .btn, .form-label, .list-group-item {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+
+/* Card de propiedad moderna */
+.property-card {
+  height: 320px;
+  min-height: 220px;
+  background: #fff;
+  border-radius: 25px;
+  border: 1.5px solid #e3e6ee;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.07);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.property-card img {
+  transition: transform 0.3s, filter 0.3s;
+  border-radius: 20px; /* Bordes más redondeados para la imagen */
+}
+
+.property-card:hover {
+  box-shadow: 0 6px 32px rgba(44, 62, 80, 0.14);
+  border-color: #b2b8c7;
+}
+
+.property-card:hover img {
+  transform: scale(1.03);
+  filter: brightness(0.92);
+}
+
+.property-card-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%);
+  color: #fff;
+  pointer-events: none;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.property-card-overlay * {
+  pointer-events: auto;
+}
+
+.property-card h5,
+.property-card .fw-bold,
+.property-card .btn {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+}
+
+.property-card .btn-warning {
+  background: #ffb700;
+  border: none;
+  color: #222;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255,183,0,0.08);
+  transition: background 0.2s;
+}
+.property-card .btn-warning:hover {
+  background: #ff9900;
+  color: #fff;
+}
+
+/* Galería de detalles de propiedad */
+.property-detail-gallery img {
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  border: 1.5px solid #e3e6ee;
+  background: #f7f8fa;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.property-detail-gallery img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 8px 32px rgba(44,62,80,0.16);
+}
+
+/* Nueva sección: Estilos para la tarjeta de detalles de propiedad */
+.card.property-detail-info {
+  border-radius: 18px;
+  border: 1.5px solid #e3e6ee;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.07);
+  background: #fff;
+}
+.card.property-detail-info h3 {
+  font-weight: 800;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+.card.property-detail-info .list-group-item {
+  background: transparent;
+  border: none;
+  font-size: 1.08rem;
+  color: #444;
+}
+.card.property-detail-info .list-group-item strong {
+  color: #222;
+  font-weight: 700;
+}
+.card.property-detail-info .list-group-item i {
+  color: #b2b8c7 !important;
+}
+.btn-warning {
+  background: #ffb700;
+  border: none;
+  color: #222;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255,183,0,0.08);
+  transition: background 0.2s;
+  font-size: 1.15rem;
+  border-radius: 10px;
+}
+.btn-warning:hover {
+  background: #ff9900;
+  color: #fff;
+}
+
+
+/* Responsive: cards más redondeadas y menos sombra en mobile */
+@media (max-width: 600px) {
+  .property-card {
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(44, 62, 80, 0.08);
+  }
+  .property-card-overlay {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
